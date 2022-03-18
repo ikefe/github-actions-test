@@ -10,12 +10,10 @@ jobs:
       - name: echo a string
         run: echo "hello world"
       - name: mutltline script
-        uses: actions/checkout@master
         run: |
           node -v
           npm -v
       - name: python command
-        uses: actions/checkout@master
         run: |
           import platform
           print
@@ -26,9 +24,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Directory Powershell
-        uses: actions/checkout@master
         run: Get-Location
       - name: Directory Bash
-        uses: actions/checkout@master
         run: pwd
         shell: bash
