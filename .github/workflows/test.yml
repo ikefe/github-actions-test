@@ -6,6 +6,7 @@ jobs:
   run-shell-command:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - name: echo a string
         run: echo "hello world"
       - name: mutltline script
@@ -21,6 +22,7 @@ jobs:
   run-windows-commands:
     runs-on: windows-latest
     steps:
+      - uses: actions/checkout@v2
       - name: Directory Powershell
         run: Get-Location
       - name: Directory Bash
