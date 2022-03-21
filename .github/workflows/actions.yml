@@ -19,3 +19,7 @@ jobs:
       - name: Sample JS Action
         id: greet
         uses: ikefe/hello-world-javascript-action@main
+        with:
+          who-to-greet: Innocent
+      - name: Log Greeting Time
+        run: echo "${{ steps.greet.outputs.time }}"
